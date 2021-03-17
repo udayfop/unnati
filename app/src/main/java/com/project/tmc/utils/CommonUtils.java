@@ -677,7 +677,7 @@ public class CommonUtils {
 
             long diff = endDate.getTime() - startDate.getTime();
             seconds = diff / 1000;
-            Log.e("nfjhfkfkf", String.valueOf(seconds));
+            Log.e("nfjhfkfkf_munna_kumar", String.valueOf(seconds));
             return seconds;
         }
         catch (Exception e){}
