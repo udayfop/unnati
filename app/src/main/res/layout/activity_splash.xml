@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundone"
+    tools:context=".activities.SplashActivity">
+    <TextView
+        android:id="@+id/party_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/ovo_regular"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="60sp"
+        android:textStyle="italic" />
+    <ImageView
+        android:id="@+id/party_logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:text="All rights are reserved."
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

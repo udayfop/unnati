@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_adddashboard"
+            android:icon="@drawable/dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_sabha"
+            android:icon="@drawable/sabha"
+            android:title="Sabha Report" />
+
+        <item
+            android:id="@+id/nav_rathreport"
+            android:icon="@drawable/rathh"
+            android:title="Rath Report" />
+        <item
+        android:id="@+id/nav_reasonreport"
+        android:icon="@drawable/reason"
+        android:title="Reason Report" />
+
+        <item
+            android:id="@+id/nav_summary"
+            android:icon="@drawable/summary"
+            android:title="Summary" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contactus"
+            android:title="Contact US" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
+</menu>

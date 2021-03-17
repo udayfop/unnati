@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.SabhaListFragment"
+    android:background="@drawable/backgroundtwo"
+    android:id="@+id/fadditems">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/party_logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/logo_unnati" />
+
+
+        <EditText
+            android:id="@+id/sabha_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_orange"
+            android:includeFontPadding="false"
+            android:hint="Enter Sabha Name"
+            android:importantForAutofill="no"
+            android:maxLines="1"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/ovo_regular"
+            android:includeFontPadding="false"
+            android:text="Description on Sabha"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/green"
+            android:textSize="20sp" />
+        <EditText
+            android:id="@+id/sabha_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/ovo_regular"
+            android:includeFontPadding="false"
+            android:hint="Describe Your Sabha Here......"
+            android:padding="@dimen/_5sdp"
+            android:maxLength="256"
+            android:background="@drawable/rounded_orange"
+            android:lines="7"
+            android:maxLines="7"
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/save_sabha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/rounded_rect"
+            android:text="Save sabha"/>
+
+
+    </LinearLayout>
+</ScrollView>

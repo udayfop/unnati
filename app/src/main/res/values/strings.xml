@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">UNNATI</string>
+    <string name="sabha_report">Sabha Report</string>
+    <string name="rath_report">Rath Report </string>
+    <string name="reason_report">Reason Report</string>
+    <string name="summary">Summary</string>
+    <string name="contact_us">Contact US</string>
+    <string name="sabha_name"> Sabha Name</string>
+    <string name="please_wait">Please Wait</string>
+    <string name="something_error">Something Went Wrong</string>
+    <string name="CHECK_VERSION">Check Version</string>
+
+    <string name="campaign">CAMPAIGN</string>
+    <string name="today">TODAY</string>
+    <string name="till_date">TILL DATE</string>
+    <string name="average">AVERAGE</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main1">MainActivity1</string>
+
+    <string name="logout">LOGOUT</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <dimen name="custom_profile_image">35dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
