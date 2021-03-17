@@ -128,6 +128,8 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
             party_logo.setImageResource(R.drawable.logo_unnati);
         }
 
+//        if (CommonUtils.differenceSecon())
+
 
         date_time.setText(new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date()));
 
