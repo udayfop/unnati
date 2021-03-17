@@ -656,7 +656,6 @@ public class CommonUtils {
             filename = "";
         }
 
-
         return filename;
     }
 
@@ -677,7 +676,7 @@ public class CommonUtils {
 
             long diff = endDate.getTime() - startDate.getTime();
             seconds = diff / 1000;
-            Log.e("nfjhfkfkf", String.valueOf(seconds));
+            Log.e("nfjhfkfkf_goa chalo", String.valueOf(seconds));
             return seconds;
         }
         catch (Exception e){}
