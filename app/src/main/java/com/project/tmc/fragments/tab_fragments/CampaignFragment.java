@@ -3,6 +3,7 @@ package com.project.tmc.fragments.tab_fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -14,6 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -128,8 +130,6 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
             party_logo.setImageResource(R.drawable.logo_unnati);
         }
 
-//        if (CommonUtils.differenceSecon())
-
 
         date_time.setText(new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault()).format(new Date()));
 
@@ -185,7 +185,6 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
 
         }
     }
-
 
     void initBarChart(View view) {
         barChart = (BarChart) view.findViewById(R.id.barChart);
@@ -250,7 +249,8 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
         pieChart.setEntryLabelColor(Color.WHITE);
         pieChart.setEntryLabelTextSize(12f);
         pieChart.setHoleRadius(0.0f);
-        setPieChartData(10, 5);
+        setPieChartData(280, 50
+        );
     }
 
     private void setPieChartData(int running, int stopped) {
@@ -260,6 +260,7 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
         if (running > 0) {
             entries.add(new PieEntry(running, ""));
             colors.add(Color.parseColor("#FF03DAC5"));
+
         }
         if (stopped > 0) {
             entries.add(new PieEntry(stopped, ""));
@@ -343,7 +344,17 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
 
     private void addItems() {
         builder = new LatLngBounds.Builder();
+        int nonOperational=0;
         for (int i = 0; i < latLongResults.size(); i++) {
+
+            Log.e("uvvyvyvyvyt",String.valueOf(CommonUtils.differenceSecon(latLongResults.get(i).getGps().getTimeStamp().replace("T"," "),
+                    new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(new Date()))));
+
+          if (CommonUtils.differenceSecon(latLongResults.get(i).getGps().getTimeStamp().replace("T",""),
+                    new SimpleDateFormat("yyyy-MM-ddHH:mm:ss", Locale.getDefault()).format(new Date())) >60)
+          {
+              nonOperational = nonOperational +1;
+          }
             if (latLongResults.get(i).getGps() != null) {
                 if (latLongResults.get(i).getGps().getVehicleStatus() == 21)   // stopped
                 {
@@ -366,8 +377,12 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
                         latLongResults.get(i).getGps().getLongitude()));
             }
 
-
         }
+        Toast.makeText(getContext(), String.valueOf(nonOperational)+ String.valueOf(latLongResults.size() - nonOperational), Toast.LENGTH_SHORT).show();
+
+        operational.setText(String.valueOf(latLongResults.size() - nonOperational));
+        non_operational.setText(String.valueOf(nonOperational));
+
         mMap.setOnMapLoadedCallback(new GoogleMap.OnMapLoadedCallback() {
             @Override
             public void onMapLoaded() {
@@ -437,7 +452,6 @@ public class CampaignFragment extends Fragment implements OnMapReadyCallback, Cl
             mClusterImageView = (ImageView) multiProfile.findViewById(R.id.image);
             mImageView = new ImageView(context);
             mDimension = (int) getResources().getDimension(R.dimen.custom_profile_image);
-            ;
             mImageView.setLayoutParams(new ViewGroup.LayoutParams(mDimension, mDimension));
             int padding = (int) getResources().getDimension(R.dimen.custom_profile_padding);
             ;

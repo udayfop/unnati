@@ -33,7 +33,7 @@
             android:text="Verification"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
             android:text="Enter your Verified Phone number"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="18sp" />
 
         <EditText
@@ -63,7 +63,7 @@
             android:inputType="text"
             android:maxLines="1"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
 
 
@@ -81,7 +81,7 @@
             android:maxLength="10"
             android:maxLines="1"
             android:textAlignment="center"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="20sp" />
         <!--        <TextView-->
         <!--            android:id="@+id/verified"-->
